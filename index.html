@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B Coms - Digital Creations</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    article {
+      margin-bottom: 40px;
+      border-bottom: 2px solid #e9ecef;
+      padding-bottom: 20px;
+    }
+
+    article:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      color: #007bff;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .whatsapp-btn, a {
+      display: inline-block;
+      background-color: #25d366;
+      color: #fff;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      text-decoration: none;
+    }
+
+    .whatsapp-btn:hover, a:hover {
+      background-color: #128C7E;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>B Coms - Digital Creations</h1>
+  </header>
+
+  <main>
+    <article>
+      <h2>Your First Digital Creation</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod quam eu mi varius, ac pellentesque est hendrerit.</p>
+      <p>For more details, feel free to ask!</p>
+      <button class="whatsapp-btn" onclick="sendWhatsAppMessage('Details about Your First Digital Creation')">WhatsApp</button>
+      <a href="mailto:b.com.edits@gmail.com?subject=Inquiry: Your First Digital Creation&body=Hello, I'm interested in learning more about Your First Digital Creation. Can you provide me with additional details?">
+        <button>Email</button>
+      </a>
+    </article>
+
+    <!-- Add more articles as needed -->
+
+    <article>
+      <h2>Contact Form</h2>
+      <form action="mailto:b.com.edits@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="question">What do you want to know?</label>
+        <textarea id="question" name="question" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </article>
+
+  </main>
+
+  <script>
+    function sendWhatsAppMessage(message) {
+      var whatsappLink = 'https://wa.me/+94720211748/?text=' + encodeURIComponent(message);
+      window.location.href = whatsappLink;
+    }
+  </script>
+</body>
+</html>
